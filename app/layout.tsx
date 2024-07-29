@@ -20,18 +20,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isProduction = process.env.NODE_ENV === 'production';
   return (
-    <html lang='en'>
+    <html
+      lang='en'
+      suppressHydrationWarning
+    >
       <body className={inter.className}>
         <ThemeProvider
-        attribute='class'
-        defaultTheme='system'
-        enableColorScheme
-        disableTransitionOnChange
-        enableSystem
+          attribute='class'
+          defaultTheme='system'
+          enableColorScheme
+          disableTransitionOnChange
+          enableSystem
         >
           {children}
-          <Analytics />
+          {isProduction && <Analytics mode='production' />}
         </ThemeProvider>
       </body>
     </html>
