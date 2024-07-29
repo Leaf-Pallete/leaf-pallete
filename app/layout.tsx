@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const inter = Raleway({ subsets: ['latin'] });
 
@@ -22,8 +23,16 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        {children}
-        <Analytics />
+        <ThemeProvider
+        attribute='class'
+        defaultTheme='system'
+        enableColorScheme
+        disableTransitionOnChange
+        enableSystem
+        >
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );
