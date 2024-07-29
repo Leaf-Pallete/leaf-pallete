@@ -46,7 +46,6 @@ export default function Home() {
           draggable="false"
         />
       </div>
-      
       <div className="text-primary-foreground flex gap-5 mb-4 sm:mb-0">
         <Link
           href="https://www.linkedin.com/company/soujunior-labs/"
