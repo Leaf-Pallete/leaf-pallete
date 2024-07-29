@@ -1,5 +1,5 @@
 'use client';
-import { ModeToggle } from '@/components/toogle';
+import { ModeToggle } from '@/components/toggle-mode-button';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
