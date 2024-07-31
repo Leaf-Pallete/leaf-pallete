@@ -29,6 +29,8 @@ export default function RootLayout({
         enableColorScheme
         disableTransitionOnChange
         enableSystem
+        disableTransitionOnChange
+        enableColorScheme
         >
           {children}
           <Analytics />
