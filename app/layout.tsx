@@ -27,6 +27,8 @@ export default function RootLayout({
         attribute='class'
         defaultTheme='class'
         enableSystem
+        disableTransitionOnChange
+        enableColorScheme
         >
           {children}
           <Analytics />
