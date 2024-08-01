@@ -21,6 +21,8 @@ jobs:
         run: bun install
 
       - name: Run build
+        env:
+          NEXT_PUBLIC_THEME_MODE: ${{ secrets.NEXT_PUBLIC_THEME_MODE}}
         run: bun run build
 
       - name: Setup Biome
