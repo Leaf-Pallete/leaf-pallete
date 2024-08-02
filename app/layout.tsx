@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { env } from "@/lib/env";
 import { Analytics } from "@vercel/analytics/react";
 
 const inter = Raleway({ subsets: ["latin"] });
@@ -26,7 +27,7 @@ export default function RootLayout({
 			<body className={inter.className}>
 				<ThemeProvider
 					attribute="class"
-					defaultTheme="light"
+					defaultTheme={env.NEXT_PUBLIC_THEME_MODE}
 					enableColorScheme
 					disableTransitionOnChange
 					enableSystem
