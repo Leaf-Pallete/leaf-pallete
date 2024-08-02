@@ -62,7 +62,7 @@ const Sidebar = () => {
 
 	return (
 		<>
-			<div className="min-w-[296px] hidden md:block">
+			<aside className="min-w-[296px] hidden md:block">
 				<div className="flex flex-col justify-between gap-2 border border-border rounded-lg min-h-screen">
 					<div className="w-[264px] p-6">
 						<header>
@@ -148,9 +148,9 @@ const Sidebar = () => {
               </div>
             </footer>
 				</div>
-			</div>
+			</aside>
 
-			<div className="block w-full md:hidden">
+			<aside className="block w-full md:hidden">
 				<S.Sheet>
 					<S.SheetTrigger className="flex gap-2 item-center">
 						<I.HamburgerMenuIcon className="size-6 cursor-pointer" />
@@ -248,7 +248,7 @@ const Sidebar = () => {
             </div>
 					</S.SheetContent>
 				</S.Sheet>
-			</div>
+			</aside>
 		</>
 	);
 };
