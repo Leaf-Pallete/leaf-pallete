@@ -3,10 +3,13 @@ import { ModeToggle } from '@/components/toggle-mode-button';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Layout from './(dashboard)/layout';
+import Item1 from './item1/page';
 
 export default function Home() {
   return (
-    <Layout />
+    <>
+     <Layout />
+    </>
     // <main className='flex min-h-screen flex-col items-center justify-center dark:bg-gradient-to-r dark:from-[#000000] dark:to-[#143811] bg-gradient-to-r from-[#0b4f2c] to-[#2e7d32] p-4 md:p-8 lg:p-12'>
     //   <motion.div
     //     initial={{ opacity: 0, y: 50 }}
