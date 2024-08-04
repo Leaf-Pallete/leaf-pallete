@@ -20,6 +20,7 @@ const Item1 = () => {
 				ducimus, quas praesentium odio aut beatae ab exercitationem veniam ut
 				doloribus.
 			</p>
+			<p className="text-2xl text-center font-bold">1234567890</p>
 			<Link
 				href="/dashboard"
 				className="flex items-center w-20 h-7 mx-auto bg-foreground text-background px-2 py-1 rounded-xl hover:bg-muted-foreground mt-5"
