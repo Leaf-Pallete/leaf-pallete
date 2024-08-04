@@ -25,7 +25,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
         attribute='class'
-        defaultTheme='class'
+        defaultTheme='system'
+        enableColorScheme
+        disableTransitionOnChange
         enableSystem
         disableTransitionOnChange
         enableColorScheme
