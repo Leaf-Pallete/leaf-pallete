@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import * as React from "react"
 import { useTheme } from "next-themes"
@@ -30,3 +30,4 @@ export function ModeToggle({ className, showText = false }: ToggleProps) {
     </Button>
   )
 }
+
