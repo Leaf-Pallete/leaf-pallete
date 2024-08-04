@@ -1,13 +1,13 @@
 "use client";
 
-import * as I from "@radix-ui/react-icons";
 import * as D from "@/components/ui/dropdown-menu";
 import * as S from "@/components/ui/sheet";
+import * as I from "@radix-ui/react-icons";
 
 import Image from "next/image";
-import logo from "../public/logo2.svg";
-import { useState } from "react";
 import Link from "next/link";
+import { useState } from "react";
+import logo from "../public/logo2.svg";
 import { ModeToggle } from "./toggle-mode-button";
 
 const Sidebar = () => {
@@ -66,7 +66,12 @@ const Sidebar = () => {
 				<div className="flex flex-col justify-between gap-2 border border-border rounded-lg min-h-screen">
 					<div className="w-[264px] p-6">
 						<header>
-							<Image className="cursor-pointer" title="leaf pallete" src={logo} alt="logo leaf pallete" />
+							<Image
+								className="cursor-pointer border rounded-xl"
+								title="leaf pallete"
+								src={logo}
+								alt="logo leaf pallete"
+							/>
 						</header>
 						<nav>
 							<h2 className="text-sm text-muted-foreground font-semibold pt-6">
@@ -139,14 +144,16 @@ const Sidebar = () => {
 						</nav>
 					</div>
 					<footer className="flex flex-col justify-center text-foreground text-center py-4 bg-muted w-full h-20 border rounded-b-lg border-border">
-              <p className="text-foreground font-semibold mb-1">Version: 0.0.01</p>
-              <div className="flex justify-center">
-                <p className="text-sm text-muted-foreground">
-                  Leaf Pallete {currentYear}
-                </p>
-                <span>&copy;</span>
-              </div>
-            </footer>
+						<p className="text-foreground font-semibold mb-1">
+							Version: 0.0.01
+						</p>
+						<div className="flex justify-center">
+							<p className="text-sm text-muted-foreground">
+								Leaf Pallete {currentYear}
+							</p>
+							<span>&copy;</span>
+						</div>
+					</footer>
 				</div>
 			</aside>
 
@@ -155,12 +162,24 @@ const Sidebar = () => {
 					<S.SheetTrigger className="flex gap-2 item-center">
 						<I.HamburgerMenuIcon className="size-6 cursor-pointer" />
 					</S.SheetTrigger>
-					<S.SheetContent className="flex flex-col justify-between bg-orange-100 dark:bg-card" side={"left"}>
+					<S.SheetContent
+						className="flex flex-col justify-between bg-orange-100 dark:bg-card"
+						side={"left"}
+					>
 						<S.SheetHeader>
-              <div className="flex flex-row-reverse items-center mt-6 gap-16">
-              <Image className="border border-white rounded-xl" title="leaf pallete" width={48} height={48} src={logo} alt="logo leaf palette" />
-                <S.SheetTitle className="text-base text-secondary-foreground font-semibold">Main menu</S.SheetTitle>
-              </div>
+							<div className="flex flex-row-reverse items-center mt-6 gap-16">
+								<Image
+									className="border border-white rounded-xl"
+									title="leaf pallete"
+									width={48}
+									height={48}
+									src={logo}
+									alt="logo leaf palette"
+								/>
+								<S.SheetTitle className="text-base text-secondary-foreground font-semibold">
+									Main menu
+								</S.SheetTitle>
+							</div>
 							<nav className="flex flex-col ml-5 items-start">
 								<h2 className="text-sm text-muted-foreground font-semibold">
 									GET STARTED
@@ -234,18 +253,23 @@ const Sidebar = () => {
 								</D.DropdownMenu>
 							</nav>
 						</S.SheetHeader>
-            <div className="flex flex-col gap-5 items-center">
-						<ModeToggle className="bg-background text-foreground border w-[140px] h-9 md:w-14 md:h-14" showText />
-              <footer className="flex flex-col justify-center text-foreground text-center py-4 bg-muted w-full h-20 border rounded-b-lg border-border">
-              <p className="text-foreground font-semibold mb-1">Version: 0.0.01</p>
-              <div className="flex justify-center">
-                <p className="text-sm text-muted-foreground">
-                  Leaf Pallete {currentYear}
-                </p>
-                <span>&copy;</span>
-              </div>
-            </footer>
-            </div>
+						<div className="flex flex-col gap-5 items-center">
+							<ModeToggle
+								className="bg-background text-foreground border w-[140px] h-9 md:w-14 md:h-14"
+								showText
+							/>
+							<footer className="flex flex-col justify-center text-foreground text-center py-4 bg-muted w-full h-20 border rounded-lg border-border">
+								<p className="text-foreground font-semibold mb-1">
+									Version: 0.0.01
+								</p>
+								<div className="flex justify-center">
+									<p className="text-sm text-muted-foreground">
+										Leaf Pallete {currentYear}
+									</p>
+									<span>&copy;</span>
+								</div>
+							</footer>
+						</div>
 					</S.SheetContent>
 				</S.Sheet>
 			</aside>
