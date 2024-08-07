@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-const Item1 = () => {
+export default function Item1() {
 	return (
 		<div className="max-w-6xl mx-auto">
 			<h1 className="text-2xl font-bold text-center my-8">
 				Componete teste - item1
 			</h1>
-			<p className="text-lg text-center">
+			<p className="text-base text-center">
 				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur
 				nisi sunt possimus labore rem tempore sequi. Ratione tempore et
 				voluptate repellendus reprehenderit officia eligendi ex, facere
@@ -20,9 +20,9 @@ const Item1 = () => {
 				ducimus, quas praesentium odio aut beatae ab exercitationem veniam ut
 				doloribus.
 			</p>
-			<p className="text-2xl text-center font-bold">1234567890</p>
+			<p className="text-base text-center font-bold">1234567890</p>
 			<Link
-				href="/dashboard"
+				href="/"
 				className="flex items-center w-20 h-7 mx-auto bg-foreground text-background px-2 py-1 rounded-xl hover:bg-muted-foreground mt-5"
 			>
 				{" "}
@@ -30,6 +30,4 @@ const Item1 = () => {
 			</Link>
 		</div>
 	);
-};
-
-export default Item1;
+}

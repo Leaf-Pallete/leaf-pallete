@@ -1,6 +1,6 @@
 import * as I from "@radix-ui/react-icons";
 import Link from "next/link";
-import { ModeToggle } from "./toggle-mode-button";
+import { ModeToggle } from "./toggleModeButton";
 
 const NavBar = () => {
 	return (
@@ -10,6 +10,7 @@ const NavBar = () => {
 				className="hidden md:block bg-background border rounded-lg hover:bg-muted p-4"
 				href="#"
 			>
+				{/* TODO */}
 				<I.BellIcon className="w-4 h-4 md:w-6 md:h-6" />
 			</Link>
 			<Link
