@@ -1,9 +1,11 @@
-import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import Header from "@/components/header";
+import Sidebar from "@/components/siderBar";
+import { ThemeProvider } from "@/components/themeProvider";
 import { env } from "@/lib/env";
 import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
 
 const inter = Raleway({ subsets: ["latin"] });
 
@@ -32,7 +34,13 @@ export default function RootLayout({
 					disableTransitionOnChange
 					enableSystem
 				>
-					{children}
+					<div className="flex flex-col md:flex-row md:items-start">
+						<Sidebar />
+						<div className="grid w-full">
+							<Header />
+							<main className="px-4">{children}</main>
+						</div>
+					</div>
 					{isProduction && <Analytics mode="production" />}
 				</ThemeProvider>
 			</body>
