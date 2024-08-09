@@ -1,21 +1,14 @@
 "use client";
-
-import * as D from "@/components/ui/dropdownMenu";
+import * as A from "@/components/ui/accordion";
 import * as S from "@/components/ui/sheet";
 import * as I from "@radix-ui/react-icons";
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import logo from "../../public/logo2.svg";
+import { ModeToggle } from "../toggleModeButton";
 
 export default function SideBarMobile() {
-	const [mobileOpenMenuId, setMobileOpenMenuId] = useState<number | null>(null);
-
-	const toggleMobileMenu = (id: number) => {
-		setMobileOpenMenuId(mobileOpenMenuId === id ? null : id);
-	};
-
 	const listLinks = [
 		{
 			id: 1,
@@ -61,7 +54,7 @@ export default function SideBarMobile() {
 					<I.HamburgerMenuIcon className="absolute top-9 left-4 size-6 cursor-pointer" />
 				</S.SheetTrigger>
 				<S.SheetContent
-					className="flex flex-col justify-between bg-orange-100 dark:bg-card"
+					className="flex flex-col justify-between bg-background dark:bg-card"
 					side={"left"}
 				>
 					<S.SheetHeader>
@@ -78,78 +71,83 @@ export default function SideBarMobile() {
 								Main menu
 							</S.SheetTitle>
 						</div>
-						<nav className="flex flex-col ml-5 items-start">
-							<h2 className="text-sm text-muted-foreground font-semibold">
+					</S.SheetHeader>
+
+					<A.Accordion
+						className="flex-1 overflow-auto"
+						type="single"
+						collapsible
+					>
+						<div className="px-4">
+							<h2 className="text-sm text-muted-foreground font-semibold pt-6">
 								GET STARTED
 							</h2>
 							{renderGetStartedItems.map((list) => (
-								<D.DropdownMenu
-									key={list.id}
-									open={mobileOpenMenuId === list.id}
-									onOpenChange={() => toggleMobileMenu(list.id)}
-								>
-									<D.DropdownMenuTrigger
-										style={{
-											marginBottom:
-												mobileOpenMenuId === list.id ? "216px" : "0px",
-										}}
-										onClick={() => toggleMobileMenu(list.id)}
-										className="flex text-secondary-foreground font-semibold pl-4 outline-none pr-[1px] w-[216px] justify-between"
-									>
+								<A.AccordionItem key={list.id} value={list.name}>
+									<A.AccordionTrigger className="text-base font-bold ml-3">
 										{list.name}
-										{mobileOpenMenuId === list.id ? (
-											<I.ChevronUpIcon className="size-6" />
-										) : (
-											<I.ChevronDownIcon className="size-6" />
-										)}
-									</D.DropdownMenuTrigger>
-									<D.DropdownMenuContent className="m-0 bg-orange-100 dark:bg-card">
-										{list.links.map((link) => (
-											<D.DropdownMenuItem key={link.text}>
-												<Link title="clique aqui" href={link.link}>
-													{link.text}
-												</Link>
-											</D.DropdownMenuItem>
-										))}
-									</D.DropdownMenuContent>
-								</D.DropdownMenu>
+									</A.AccordionTrigger>
+									<A.AccordionContent>
+										<ul>
+											{list.links.map((link) => (
+												<li key={link.text}>
+													<Link
+														className="flex hover:bg-secondary py-4 rounded-lg"
+														href={link.link}
+													>
+														<p className="text-base pl-4">{link.text}</p>
+													</Link>
+												</li>
+											))}
+										</ul>
+									</A.AccordionContent>
+								</A.AccordionItem>
 							))}
+
 							<h2 className="text-sm text-muted-foreground font-semibold pt-6">
 								LIBRARY
 							</h2>
-							<D.DropdownMenu
-								key="components"
-								open={mobileOpenMenuId === 3}
-								onOpenChange={() => toggleMobileMenu(3)}
-							>
-								<D.DropdownMenuTrigger
-									style={{
-										marginBottom: mobileOpenMenuId === 3 ? "216px" : "0px",
-									}}
-									onClick={() => toggleMobileMenu(3)}
-									className="flex text-secondary-foreground font-semibold pl-4 pr-[1px] outline-none w-[216px] justify-between"
-								>
+							<A.AccordionItem value="components">
+								<A.AccordionTrigger className="text-base font-bold ml-3">
 									Components
-									{mobileOpenMenuId === 3 ? (
-										<I.ChevronUpIcon className="size-6" />
-									) : (
-										<I.ChevronDownIcon className="size-6" />
-									)}
-								</D.DropdownMenuTrigger>
-								<D.DropdownMenuContent className="m-0 bg-orange-100 dark:bg-card">
-									{listLinks
-										.find((item) => item.id === 3)
-										?.links.map((link) => (
-											<D.DropdownMenuItem key={link.text}>
-												<Link title="clique aqui" href={link.link}>
-													{link.text}
-												</Link>
-											</D.DropdownMenuItem>
-										))}
-								</D.DropdownMenuContent>
-							</D.DropdownMenu>
-						</nav>
-					</S.SheetHeader>
+								</A.AccordionTrigger>
+								<A.AccordionContent>
+									<ul>
+										{listLinks
+											.find((item) => item.id === 3)
+											?.links.map((link) => (
+												<li key={link.text}>
+													<Link
+														className="flex hover:bg-secondary py-4 rounded-lg"
+														href={link.link}
+													>
+														<p className="text-base pl-4">{link.text}</p>
+													</Link>
+												</li>
+											))}
+									</ul>
+								</A.AccordionContent>
+							</A.AccordionItem>
+						</div>
+					</A.Accordion>
+
+					<div className="flex flex-col items-center gap-4 justify-between p-4">
+						<ModeToggle
+							className="bg-foreground text-background border w-[140px] h-9 md:w-14 md:h-14"
+							showText
+						/>
+						<footer className="flex flex-col justify-center text-foreground text-center py-4 bg-muted w-full border rounded-lg border-border">
+							<p className="text-foreground font-semibold mb-1">
+								Version: 0.0.01
+							</p>
+							<div className="flex gap-1 justify-center">
+								<p className="text-sm text-muted-foreground">
+									Leaf Pallete {currentYear}
+								</p>
+								<span>&copy;</span>
+							</div>
+						</footer>
+					</div>
 				</S.SheetContent>
 			</S.Sheet>
 		</aside>
