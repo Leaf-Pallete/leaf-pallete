@@ -41,7 +41,7 @@ export default function Hero() {
 						<Image
 							className="absolute top-[170px] md:top-[118px] right-[76px] md:right-2 w-[210px] md:w-[320px]"
 							src={border}
-							alt="renderização de imagem de borda personalizada"
+							alt="imagem de borda personalizada"
 						/>
 					</h2>
 					<p className="text-muted-foreground text-center font-semibold w-[327px] md:w-[480px] mx-auto">
