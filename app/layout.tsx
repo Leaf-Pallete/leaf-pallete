@@ -1,6 +1,6 @@
 import { Raleway } from "next/font/google";
 import "./globals.css";
-import Sidebar from "@/components/SiderBar";
+import Sidebar from "@/components/Sidebar";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/themeProvider";
 import { env } from "@/lib/env";
