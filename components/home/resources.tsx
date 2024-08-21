@@ -36,15 +36,11 @@ const resourcesCardsData = [
 
 const Resources = () => {
 	return (
-		<section className="mt-10 w-full max-w-screen-xl">
+	<section className="pt-10 w-full max-w-screen-xl">
 			<h2 className="text-foreground text-2xl font-semibold mb-6">Resources</h2>
 			<div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
-				{resourcesCardsData.map((item, i) => (
-					<Card
-						key={item.id}
-						title={item.title}
-						description={item.description}
-					/>
+				{resourcesCardsData.map((item) => (
+					<Card key={item.id} {...item} />
 				))}
 			</div>
 		</section>

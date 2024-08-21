@@ -30,18 +30,13 @@ const lastUpdatesCardsData = [
 
 const LastUpdates = () => {
 	return (
-		<section className="mt-10 w-full max-w-screen-xl">
+		<section className="pt-10 w-full max-w-screen-xl">
 			<h2 className="text-foreground text-2xl font-semibold mb-6">
 				Last Updates
 			</h2>
 			<div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-12">
 				{lastUpdatesCardsData.map((item) => (
-					<Card
-						key={item.id}
-						title={item.title}
-						description={item.description}
-						imgsrc={item.imgsrc}
-					/>
+					<Card key={item.id} {...item} />
 				))}
 			</div>
 		</section>
