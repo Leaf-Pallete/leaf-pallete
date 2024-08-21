@@ -55,7 +55,7 @@ export default function Header() {
 							src={logo}
 							alt="logo leaf palette"
 						/>
-						<h1 className="hidden md:block text-sm font-semibold">
+						<h1 className="hidden md:block text-foreground text-sm font-semibold">
 							Leaf Pallete
 						</h1>
 					</Link>
