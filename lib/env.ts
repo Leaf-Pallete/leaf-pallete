@@ -6,6 +6,6 @@ export const env = createEnv({
 		NEXT_PUBLIC_THEME_MODE: z.string().min(1),
 	},
 	runtimeEnv: {
-		NEXT_PUBLIC_THEME_MODE: process.env.NEXT_PUBLIC_THEME_MODE,
+		NEXT_PUBLIC_THEME_MODE: process.env.NEXT_PUBLIC_THEME_MODE || "light",
 	},
 });

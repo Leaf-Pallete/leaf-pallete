@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
 	return (
-		<main className="flex min-h-screen flex-col items-start justify-between relative overflow-hidden bg-gradient-to-r from-[#022C05] to-primary p-8 lg:px-16 lg:py-12">
+		<main className="flex min-h-screen flex-col items-start justify-between relative overflow-hidden bg-gradient-to-r from-[#022C05] to-primary p-8 lg:px-16 lg:py-12 rounded-2xl">
 			<Link href="/">
 				<div className="flex items-center gap-1 cursor-pointer">
 					<div className="filter brightness-0 invert">
