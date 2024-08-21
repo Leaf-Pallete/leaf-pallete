@@ -1,7 +1,7 @@
 import { Raleway } from "next/font/google";
 import "./globals.css";
+import Sidebar from "@/components/Sidebar";
 import Header from "@/components/header";
-import Sidebar from "@/components/sidebar";
 import { ThemeProvider } from "@/components/themeProvider";
 import { env } from "@/lib/env";
 import { Analytics } from "@vercel/analytics/react";
