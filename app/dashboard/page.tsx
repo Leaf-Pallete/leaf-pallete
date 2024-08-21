@@ -1,7 +1,7 @@
-import Header from "../../components/header";
+// import Header from "../../components/Header";
 
-const Layout = () => {
-	return <Header />;
-};
+// const Layout = () => {
+// 	return <Header />;
+// };
 
-export default Layout;
+// export default Layout;

@@ -3,9 +3,7 @@ import Link from "next/link";
 export default function Item1() {
 	return (
 		<div className="max-w-6xl mx-auto">
-			<h1 className="text-2xl font-bold text-center my-8">
-				Página Componentes
-			</h1>
+			<h1 className="text-2xl font-bold text-center my-8">Página Styles</h1>
 			<p className="text-base text-center">
 				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur
 				nisi sunt possimus labore rem tempore sequi. Ratione tempore et

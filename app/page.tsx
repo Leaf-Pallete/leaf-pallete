@@ -1,11 +1,13 @@
+import Hero from "@/components/Home/HeroSection/Hero";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
 	return (
-		<main className="flex min-h-screen flex-col items-start justify-between relative overflow-hidden bg-gradient-to-r from-[#022C05] to-primary p-8 lg:px-16 lg:py-12 rounded-2xl">
-			<Link href="/">
+		<main className="py-20">
+			<Hero />
+			{/* <Link href="/">
 				<div className="flex items-center gap-1 cursor-pointer">
 					<div className="filter brightness-0 invert">
 						<Image
@@ -56,7 +58,7 @@ export default function Home() {
 				<Link href="https://github.com/Leaf-Pallete" target="_blank">
 					<GitHubLogoIcon className="size-7 duration-200 hover:scale-125" />
 				</Link>
-			</div>
+			</div> */}
 		</main>
 	);
 }

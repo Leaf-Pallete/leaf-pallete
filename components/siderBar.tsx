@@ -5,7 +5,7 @@ export default function Sidebar() {
 	return (
 		<>
 			<SideBarDesktop />
-			<SideBarMobile />
+			{/* <SideBarMobile /> */}
 		</>
 	);
 }

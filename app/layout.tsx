@@ -1,7 +1,7 @@
 import { Raleway } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
-import Sidebar from "@/components/siderBar";
+import Header from "@/components/Header";
+import Sidebar from "@/components/SiderBar";
 import { ThemeProvider } from "@/components/themeProvider";
 import { env } from "@/lib/env";
 import { Analytics } from "@vercel/analytics/react";
@@ -38,7 +38,7 @@ export default function RootLayout({
 						<Sidebar />
 						<div className="grid w-full">
 							<Header />
-							<main className="px-4">{children}</main>
+							<main className="px-2">{children}</main>
 						</div>
 					</div>
 					{isProduction && <Analytics mode="production" />}
