@@ -1,11 +1,11 @@
 import { Raleway } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { env } from "@/lib/env";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
 
 const inter = Raleway({ subsets: ["latin"] });
 
@@ -24,6 +24,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	const isProduction = process.env.NODE_ENV === "production";
+
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body className={inter.className}>
