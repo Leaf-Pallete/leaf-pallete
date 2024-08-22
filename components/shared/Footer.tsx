@@ -4,17 +4,18 @@ import Link from "next/link";
 
 export default function Footer() {
 	return (
-		<section className="mb-8 bg-muted">
-			<div className="flex flex-col md:flex-row gap-6 items-start justify-between py-10 px-6 md:py-20 md:px-28 w-full md:max-w-[1440px] mx-auto">
+		<section className="bg-muted">
+			<div className="flex flex-col md:flex-row gap-6 items-start justify-between py-10 px-6 md:py-20 md:px-28 md:max-w-[1440px] mx-auto">
 				<div className=" flex flex-col gap-8">
 					<Link className="flex items-center gap-2" href="/">
 						<Image
+							className="text-foreground"
 							width={41}
 							height={41}
 							src={"/vetor-logo.svg"}
 							alt="logo leaf pallete"
 						/>
-						<h1 className="text-base text-foreground">Leaf Pallete</h1>
+						Leaf Pallete
 					</Link>
 					<p className="text-sm text-muted-foreground font-semibold">
 						Empowering designers to create exceptional web experiences
@@ -34,14 +35,14 @@ export default function Footer() {
 				<div className="flex items-start gap-20 justify-between">
 					<div>
 						<h2 className="text-2xl text-foreground font-semibold">Social</h2>
-						<Link href="#">
-							<p className="text-muted-foreground">GitHub</p>
+						<Link className="text-muted-foreground" href="#">
+							GitHub
 						</Link>
-						<Link href="#">
-							<p className="text-muted-foreground">Discord</p>
+						<Link className="text-muted-foreground" href="#">
+							Discord
 						</Link>
-						<Link href="#">
-							<p className="text-muted-foreground">Linkedin</p>
+						<Link className="text-muted-foreground" href="#">
+							Linkedin
 						</Link>
 					</div>
 					<div>
@@ -49,11 +50,11 @@ export default function Footer() {
 							<h2 className="text-2xl text-foreground font-semibold">
 								Important links
 							</h2>
-							<Link href="#">
-								<p className="text-muted-foreground">About us</p>
+							<Link className="text-muted-foreground" href="#">
+								About us
 							</Link>
-							<Link href="#">
-								<p className="text-muted-foreground">Contact Us</p>
+							<Link className="text-muted-foreground" href="#">
+								Contact Us
 							</Link>
 						</div>
 					</div>
