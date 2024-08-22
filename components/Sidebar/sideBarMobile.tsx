@@ -6,7 +6,7 @@ import * as I from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/logo2.svg";
-import { ModeToggle } from "../ToggleModeButton";
+import { ModeToggle } from "../ModeToggle";
 
 export default function SideBarMobile() {
 	const listLinks = [
