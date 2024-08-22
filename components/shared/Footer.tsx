@@ -4,12 +4,11 @@ import Link from "next/link";
 
 export default function Footer() {
 	return (
-		<section className="bg-muted">
+		<section className="w-full bg-muted">
 			<div className="flex flex-col md:flex-row gap-6 items-start justify-between py-10 px-6 md:py-20 md:px-28 md:max-w-[1440px] mx-auto">
 				<div className=" flex flex-col gap-8">
-					<Link className="flex items-center gap-2" href="/">
+					<Link className="flex items-center gap-2 text-foreground" href="/">
 						<Image
-							className="text-foreground"
 							width={41}
 							height={41}
 							src={"/vetor-logo.svg"}
