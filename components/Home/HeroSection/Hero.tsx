@@ -37,7 +37,7 @@ export default function Hero() {
 					}}
 				>
 					<h2 className="relative text-[40px] md:text-6xl text-foreground text-center pb-6 font-semibold mx-auto max-w-[580px]">
-						Modern Web Design Mastery <span>Starts Here</span>
+						Modern Web Design Mastery <span>Starts here</span>
 						<Image
 							className="absolute top-[170px] md:top-[118px] right-[76px] md:right-2 w-[210px] md:w-[320px]"
 							src={border}
