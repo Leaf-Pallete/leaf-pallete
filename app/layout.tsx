@@ -1,8 +1,6 @@
 import { Raleway } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import { env } from "@/lib/env";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
@@ -35,13 +33,7 @@ export default function RootLayout({
 					disableTransitionOnChange
 					enableSystem
 				>
-					<div className="flex flex-col md:flex-row md:items-start">
-						<Sidebar />
-						<div className="grid w-full">
-							<Header />
-							<main className="px-2">{children}</main>
-						</div>
-					</div>
+					{children}
 					{isProduction && <Analytics mode="production" />}
 				</ThemeProvider>
 			</body>

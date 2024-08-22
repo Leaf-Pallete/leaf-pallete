@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import logo from "../public/vetor-logo.svg";
 import { ModeToggle } from "./ModeToggle";
 
 export default function Header() {
@@ -52,7 +51,7 @@ export default function Header() {
 							className="ml-7"
 							width={28}
 							height={28}
-							src={logo}
+							src={"/vetor-logo.svg"}
 							alt="logo leaf palette"
 						/>
 						<h1 className="hidden md:block text-foreground text-sm font-semibold">
@@ -91,7 +90,7 @@ export default function Header() {
 									<Image
 										width={28}
 										height={28}
-										src={logo}
+										src={"/vetor-logo.svg"}
 										alt="logo leaf palette"
 									/>
 								</div>
@@ -106,7 +105,7 @@ export default function Header() {
 										<Image
 											width={28}
 											height={28}
-											src={logo}
+											src={"/vetor-logo.svg"}
 											alt="logo leaf palette"
 										/>
 										<h1 className="text-sm font-semibold text-foreground whitespace-nowrap">
