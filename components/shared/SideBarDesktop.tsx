@@ -45,7 +45,7 @@ export default function SideBarDesktop() {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<aside className="m-w-[296px] hidden md:block p-6 md:p-8">
+		<aside className="m-w-[296px] hidden p-6 md:p-8">
 			<A.Accordion type="single" collapsible className="">
 				<div className="flex flex-col justify-between border border-border rounded-xl m-h-screen">
 					<div className="w-[264px] h-screen p-6">

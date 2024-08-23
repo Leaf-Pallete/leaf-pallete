@@ -65,6 +65,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground lining-nums;
+    @apply bg-background text-foreground lining-nums overflow-x-hidden;
   }
 }

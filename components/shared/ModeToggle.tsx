@@ -25,8 +25,8 @@ export function ModeToggle({ className, showText = false }: ToggleProps) {
 			{showText && (
 				<span className="block md:hidden">{toggleText}&nbsp;&nbsp;</span>
 			)}
-			<SunIcon className="dark:block h-6 w-6 hidden" />
-			<MoonIcon className="dark:hidden h-6 w-6 block" />
+			<SunIcon className="text-foreground h-6 w-6 block dark:hidden" />
+			<MoonIcon className="text-foreground h-6 w-6 hidden dark:block" />
 			<span className="sr-only">Toggle theme</span>
 		</Button>
 	);

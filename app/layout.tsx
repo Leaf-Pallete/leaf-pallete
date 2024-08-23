@@ -1,8 +1,6 @@
 import { Raleway } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
-import Sidebar from "@/components/siderBar";
-import { ThemeProvider } from "@/components/themeProvider";
+import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import { env } from "@/lib/env";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
@@ -24,6 +22,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	const isProduction = process.env.NODE_ENV === "production";
+
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body className={inter.className}>
@@ -34,13 +33,7 @@ export default function RootLayout({
 					disableTransitionOnChange
 					enableSystem
 				>
-					<div className="flex flex-col md:flex-row md:items-start">
-						<Sidebar />
-						<div className="grid w-full">
-							<Header />
-							<main className="px-4">{children}</main>
-						</div>
-					</div>
+					{children}
 					{isProduction && <Analytics mode="production" />}
 				</ThemeProvider>
 			</body>
