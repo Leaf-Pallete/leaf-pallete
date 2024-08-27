@@ -3,31 +3,18 @@
 import { Button } from "@/components/ui/button";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
-import * as React from "react";
 
-type ToggleProps = {
-	className: string;
-	showText?: boolean;
-};
-
-export function ModeToggle({ className, showText = false }: ToggleProps) {
+export function ModeToggle() {
 	const { setTheme, theme } = useTheme();
 
-	const toggleText = theme === "light" ? "Dark Mode" : "Light Mode";
+	const isDarkMode = theme === "dark";
+	const toggleTheme = () => setTheme(isDarkMode ? "light" : "dark");
 
 	return (
-		<Button
-			variant="ghost"
-			size="icon"
-			onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-			className={className}
-		>
-			{showText && (
-				<span className="block md:hidden">{toggleText}&nbsp;&nbsp;</span>
-			)}
-			<SunIcon className="text-foreground h-6 w-6 block dark:hidden" />
-			<MoonIcon className="text-foreground h-6 w-6 hidden dark:block" />
+		<Button variant="ghost" size="icon" onClick={toggleTheme}>
 			<span className="sr-only">Toggle theme</span>
+			<SunIcon className="h-4 w-4 block dark:hidden" />
+			<MoonIcon className="h-4 w-4 hidden dark:block" />
 		</Button>
 	);
 }
