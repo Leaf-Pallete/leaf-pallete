@@ -34,3 +34,11 @@ export interface SidebarSection {
 	title: string;
 	links: SidebarLink[];
 }
+
+export interface CardProps {
+	id: string;
+	title: string;
+	subTitle: string;
+	imgLight: string;
+	imgDark: string;
+}
