@@ -1,7 +1,7 @@
 export default function StylesModulePage() {
 	return (
-		<main className="py-20">
-			<h1>Pagina inicial styles aqui</h1>
+		<main>
+			<h1 className="text-3xl">Styles</h1>
 		</main>
 	);
 }

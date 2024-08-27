@@ -5,7 +5,7 @@ import * as S from "@/components/ui/sheet";
 import { headerLinks } from "@/config/headerLinks";
 import { sidebarLinks } from "@/config/sidebarLinks";
 import { cn } from "@/lib/utils";
-import type { HeaderLink, SidebarLink, SidebarSection } from "@/types";
+import type { HeaderLink } from "@/types";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
