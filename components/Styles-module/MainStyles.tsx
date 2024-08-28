@@ -2,26 +2,29 @@ import Image from "next/image";
 
 export const MainStyles = () => {
 	return (
-		<div className="flex justify-center">
-			<div className="w-full flex justify-center lg:justify-between flex-wrap">
-				<div className="w-[442px] text-center lg:text-start">
-					<p className="font-semibold text-[40px] md:text-[64px] text-foreground">
+		<div className="flex justify-between mx-auto">
+			<div className="w-full flex flex-col lg:flex-row justify-between items-center lg:items-start">
+				<div className="w-full lg:w-[442px] text-center md:text-center lg:text-start">
+					<p className="font-semibold text-[36px] md:text-[64px] text-foreground leading-none mb-4">
 						Styles
 					</p>
-					<p className="text-regular md:text-xl text-foreground">
+					<p className="text-regular lg:text-lg 2xl:text-xl text-foreground max-w-[400px] mx-auto md:mx-auto lg:mx-0">
 						Components are one of the main building blocks of the design system.
 						Its use in a systemic way helps to create consistency between
 						products.
 					</p>
 				</div>
-				<div className="mt-8 md:pt-0 border">
-					<Image
-						src="/image-main-card-styles-modules.png"
-						alt="imagem de exibição do card"
-						title="imagem de exibição do card"
-						width={488}
-						height={346}
-					/>
+				<div className="hidden lg:block w-full lg:w-[400px] lg:ml-auto">
+					<div className="relative w-full max-w-[488px] h-[280px]">
+						<Image
+							src="/style-hero-img.svg"
+							alt="imagem de exibição do card"
+							title="imagem de exibição do card"
+							fill
+							style={{ objectFit: "contain" }}
+							sizes="(min-width: 1024px) 488px, 100vw"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

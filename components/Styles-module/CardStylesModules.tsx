@@ -1,11 +1,8 @@
 "use client";
-
+import type { CardProps } from "@/types";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import { type FunctionComponent, useEffect, useState } from "react";
-
-import { useTheme } from "next-themes";
-
-import type { CardProps } from "@/types";
 
 interface CardsStylesModulesProps {
 	item: CardProps;
@@ -20,7 +17,6 @@ export const CardsStylesModules: FunctionComponent<CardsStylesModulesProps> = ({
 
 	useEffect(() => {
 		setIsClient(true);
-
 		if (isClient) {
 			const selectedImage =
 				resolvedTheme === "dark" ? item.imgDark : item.imgLight;
@@ -29,27 +25,27 @@ export const CardsStylesModules: FunctionComponent<CardsStylesModulesProps> = ({
 	}, [isClient, resolvedTheme, item.imgDark, item.imgLight]);
 
 	return (
-		<>
-			<div className="w-[327px] h-[277px] md:w-[368px] md:h-[268px] rounded-md bg-card border border-border">
-				<div className="h-[124px] w-full border-b border-border">
-					{imgOfTheme && (
-						<Image
-							src={imgOfTheme}
-							alt={item.title}
-							title={item.title}
-							width={368}
-							height={124}
-							className="object-cover w-full h-full rounded-md"
-						/>
-					)}
-				</div>
-				<div className="px-6 pt-3">
-					<p className="text-card-foreground text-xl font-semibold">
-						{item.title}
-					</p>
-					<p className="text-muted-foreground font-medium">{item.subTitle}</p>
-				</div>
+		<div className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] h-[268px] rounded-md bg-card border border-border">
+			<div className="h-[124px] w-full border-b border-border">
+				{imgOfTheme && (
+					<Image
+						src={imgOfTheme}
+						alt={item.title}
+						title={item.title}
+						width={400}
+						height={124}
+						className="object-cover w-full h-full rounded-t-md"
+					/>
+				)}
 			</div>
-		</>
+			<div className="px-4 pt-3">
+				<p className="text-card-foreground text-lg font-semibold">
+					{item.title}
+				</p>
+				<p className="text-muted-foreground text-sm max-w-[270px]">
+					{item.subTitle}
+				</p>
+			</div>
+		</div>
 	);
 };
