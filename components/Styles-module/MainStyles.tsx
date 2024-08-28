@@ -3,8 +3,8 @@ import Image from "next/image";
 export const MainStyles = () => {
 	return (
 		<div className="flex justify-center">
-			<div className="w-full flex justify-between flex-wrap">
-				<div className="w-[442px]">
+			<div className="w-full flex justify-center lg:justify-between flex-wrap">
+				<div className="w-[442px] text-center lg:text-start">
 					<p className="font-semibold text-[40px] md:text-[64px] text-foreground">
 						Styles
 					</p>
@@ -14,7 +14,7 @@ export const MainStyles = () => {
 						products.
 					</p>
 				</div>
-				<div className="pt-8 md:pt-0">
+				<div className="mt-8 md:pt-0 border">
 					<Image
 						src="/image-main-card-styles-modules.png"
 						alt="imagem de exibição do card"
