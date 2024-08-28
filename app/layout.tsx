@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/shared/ThemeProvider";
+import { env } from "@/lib/env";
 import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
 
 const inter = Raleway({ subsets: ["latin"] });
 
@@ -21,12 +22,13 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	const isProduction = process.env.NODE_ENV === "production";
+
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body className={inter.className}>
 				<ThemeProvider
 					attribute="class"
-					defaultTheme="light"
+					defaultTheme={env.NEXT_PUBLIC_THEME_MODE}
 					enableColorScheme
 					disableTransitionOnChange
 					enableSystem
