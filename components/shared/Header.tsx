@@ -30,7 +30,7 @@ const Header = () => {
 };
 
 const DesktopNav = ({ currentPath }: { currentPath: string }) => (
-	<nav className="hidden md:flex gap-8 items-center text-sm font-medium">
+	<nav className="hidden lg:flex gap-8 items-center text-sm font-medium">
 		{headerLinks
 			.filter((link) => !link.mobileOnly)
 			.map((link) => (
@@ -46,7 +46,7 @@ const DesktopNav = ({ currentPath }: { currentPath: string }) => (
 
 const MobileNavContent = ({ currentPath }: { currentPath: string }) => (
 	<S.Sheet>
-		<S.SheetTrigger className="p-2 md:hidden">
+		<S.SheetTrigger className="p-2 lg:hidden">
 			<HamburgerMenuIcon className="size-4 cursor-pointer" />
 		</S.SheetTrigger>
 		<S.SheetContent className="flex flex-col w-[85%] p-0" side="left">

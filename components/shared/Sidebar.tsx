@@ -10,7 +10,7 @@ export default function Sidebar() {
 	const pathname = usePathname();
 
 	return (
-		<aside className="w-[260px] bg-background hidden md:block h-screen">
+		<aside className="w-[260px] bg-background hidden lg:block h-screen">
 			<ScrollArea className="h-full">
 				<div className="py-8 px-6">
 					{sidebarLinks.map((section) => (

@@ -1,7 +1,11 @@
+import { ContainerCardsStyles } from "@/components/Styles-module/ContainerCardsStyles";
+import { MainStyles } from "@/components/Styles-module/MainStyles";
+
 export default function StylesModulePage() {
 	return (
 		<main>
-			<h1 className="text-3xl">Styles</h1>
+			<MainStyles />
+			<ContainerCardsStyles />
 		</main>
 	);
 }
