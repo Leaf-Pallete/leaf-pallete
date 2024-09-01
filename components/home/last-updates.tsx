@@ -30,7 +30,7 @@ const lastUpdatesCardsData = [
 
 const LastUpdates = () => {
 	return (
-		<section className="pt-10 w-full max-w-screen-xl">
+		<section className="pt-20 w-full max-w-screen-xl mx-auto">
 			<h2 className="text-foreground text-2xl font-semibold mb-6">
 				Last Updates
 			</h2>
