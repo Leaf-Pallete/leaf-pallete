@@ -1,5 +1,5 @@
-import { ContainerCardsStyles } from "@/components/Styles-module/ContainerCardsStyles";
-import { MainStyles } from "@/components/Styles-module/MainStyles";
+import { ContainerCardsStyles } from "@/components/styles-module/ContainerCardsStyles";
+import { MainStyles } from "@/components/styles-module/MainStyles";
 
 export default function StylesModulePage() {
 	return (
