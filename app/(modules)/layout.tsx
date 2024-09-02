@@ -16,7 +16,6 @@ export default function ModulesLayout({
 					<main className="px-6 py-8 w-full h-full">{children}</main>
 					<Footer isHome={false} />
 				</div>
-				
 			</div>
 		</div>
 	);
