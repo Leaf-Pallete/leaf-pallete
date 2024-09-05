@@ -27,13 +27,13 @@ export default function Footer({ isHome }: { isHome: boolean }) {
 						Empowering designers to create exceptional web experiences
 					</p>
 					<div className="flex gap-6">
-						<Link href="#">
+						<Link href="#" target="_blank">
 							<I.LinkedInLogoIcon className="size-6" />
 						</Link>
-						<Link href="#">
+						<Link href="#" target="_blank">
 							<I.DiscordLogoIcon className="size-6" />
 						</Link>
-						<Link href="https://github.com/Leaf-Pallete">
+						<Link href="https://github.com/Leaf-Pallete" target="_blank">
 							<I.GitHubLogoIcon className="size-6" />
 						</Link>
 					</div>
@@ -46,13 +46,14 @@ export default function Footer({ isHome }: { isHome: boolean }) {
 						<Link
 							className="text-muted-foreground"
 							href="https://github.com/Leaf-Pallete"
+							target="_blank"
 						>
 							GitHub
 						</Link>
-						<Link className="text-muted-foreground" href="#">
+						<Link className="text-muted-foreground" href="#" target="_blank">
 							Discord
 						</Link>
-						<Link className="text-muted-foreground" href="#">
+						<Link className="text-muted-foreground" href="#" target="_blank">
 							Linkedin
 						</Link>
 					</div>
