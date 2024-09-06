@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const CardDesignStyles = () => {
 	return (
-		<div className="relative w-[325px] sm:w-[575px] rounded-t-lg sm:rounded-t-xl rounded-b-lg overflow-hidden">
+		<div className="relative w-full sm:w-[575px] rounded-t-lg sm:rounded-t-xl rounded-b-lg overflow-hidden">
 			<div className="absolute inset-0 bg-gradient-to-b from-[#16A249] to-[#F8C8FF] opacity-20" />
 			<div className="relative z-10 w-full h-[260px] sm:h-[436px] flex flex-col justify-end items-center rounded-t-lg sm:rounded-t-xl cursor-pointer">
 				<div className="w-[284px] h-[235px] sm:w-[503px] sm:h-[392px] flex flex-col bg-card rounded-t-lg sm:rounded-t-xl">
