@@ -10,8 +10,8 @@ export default function Home() {
 		<>
 			<Header />
 			<Hero />
-			<main className="py-20 max-w-[90%] mx-auto">
-				<div className="flex max-w-screen-xl gap-8 w-full mx-auto justify-between items-center flex-col lg:flex-row">
+			<main className="flex flex-col items-center py-20 w-full md:max-w-[90%] px-6 mx-auto">
+				<div className="flex max-w-screen-xl gap-8 w-full justify-between items-center flex-col lg:flex-row">
 					<CardUiComponents />
 					<CardDesignStyles />
 				</div>
