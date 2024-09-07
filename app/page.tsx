@@ -7,10 +7,10 @@ import Header from "@/components/shared/Header";
 
 export default function Home() {
 	return (
-		<>
+		<div className="w-full max-w-[1440px] mx-auto">
 			<Header />
 			<Hero />
-			<main className="flex flex-col items-center py-20 w-full md:max-w-[90%] px-6 mx-auto">
+			<main className="flex flex-col items-center py-20 px-6">
 				<div className="flex max-w-screen-xl gap-8 w-full justify-between items-center flex-col lg:flex-row">
 					<CardUiComponents />
 					<CardDesignStyles />
@@ -18,6 +18,6 @@ export default function Home() {
 				<LastUpdates />
 				<Resources />
 			</main>
-		</>
+		</div>
 	);
 }
