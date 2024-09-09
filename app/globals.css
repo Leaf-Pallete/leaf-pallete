@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -63,11 +62,12 @@
 @layer base {
   * {
     @apply border-border;
+    [data-theme='dark'] [data-hide-on-theme='dark'],
+    [data-theme='light'] [data-hide-on-theme='light'] {
+      display: none;
+    }
   }
   body {
     @apply bg-background text-foreground lining-nums overflow-x-hidden;
   }
 }
-
-
-
