@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const CardUiComponents = () => {
 	return (
-		<div className="relative w-[325px] sm:w-[575px] rounded-t-lg sm:rounded-t-xl rounded-b-lg overflow-hidden">
+		<div className="relative w-full sm:w-[575px] rounded-t-lg sm:rounded-t-xl rounded-b-lg overflow-hidden">
 			<div className="absolute inset-0 bg-gradient-to-b from-[#16A249] to-[#F8C8FF] opacity-20" />
 			<div className="relative z-10 w-full h-[260px] sm:h-[436px] flex flex-col justify-end items-center rounded-t-lg sm:rounded-t-xl cursor-pointer">
 				<div className="w-[284px] h-[235px] sm:w-[503px] sm:h-[392px] flex flex-col bg-card rounded-t-lg sm:rounded-t-xl">
@@ -24,9 +24,9 @@ export const CardUiComponents = () => {
 							</Link>
 						</div>
 					</div>
-					<div className="hidden pl-4 sm:pl-5 sm:flex flex-col pt-[10px] sm:pt-[48px]">
+					<div className="pl-4 sm:pl-5 sm:flex flex-col pt-[10px] sm:pt-[48px]">
 						<Image
-							src="/image-card-ui-components.png"
+							src="/image-components.svg"
 							alt=""
 							title=""
 							width={457}
@@ -55,7 +55,7 @@ export const CardUiComponents = () => {
 								UI Components
 							</p>
 							<div className=" w-[170px] sm:w-[270px] relative bottom-1">
-								<p className="text-sm font-semibold text-muted-foreground">
+								<p className="text-xs font-semibold text-muted-foreground">
 									Explore the best techniques for creating intuitive and
 									accessible components.
 								</p>
@@ -64,8 +64,8 @@ export const CardUiComponents = () => {
 					</div>
 					<div className="flex items-center">
 						<Link
-							href="#"
-							className={`${cn(buttonVariants({ variant: "default" }))} text-[8px] sm:px-[26px] font-medium`}
+							href="/components-module"
+							className={`${cn(buttonVariants({ variant: "default", size: "sm" }))}`}
 						>
 							Learn more
 						</Link>

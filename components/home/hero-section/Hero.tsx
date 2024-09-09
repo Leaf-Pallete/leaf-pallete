@@ -23,7 +23,7 @@ export default function Hero() {
 	return (
 		<>
 			<section
-				className="max-w-[375px] md:max-w-[1440px] mx-auto mb-8"
+				className="max-w-[375px] md:max-w-[1240px] mx-auto mb-8 pt-20 px-6 lg:px-0"
 				id="hero"
 			>
 				<motion.div

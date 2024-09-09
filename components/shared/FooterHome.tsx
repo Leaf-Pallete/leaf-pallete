@@ -4,15 +4,14 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Footer({ isHome }: { isHome: boolean }) {
+export default function FooterHome() {
 	const { resolvedTheme } = useTheme();
 	const logoSrc =
 		resolvedTheme === "dark" ? "/logo-dark.svg" : "/logo-light.svg";
 
-	const footerBgColor = isHome ? "w-full bg-muted" : "w-full ";
 	return (
-		<section className={footerBgColor}>
-			<div className="flex flex-col md:flex-row gap-6 items-start justify-between py-8 px-6 md:py-20 md:px-8 md:max-w-[1440px] mx-auto">
+		<section className="w-full bg-muted">
+			<div className="flex flex-col md:flex-row gap-6 items-start justify-between py-8 md:py-20 md:max-w-[1240px] mx-auto px-6 lg:px-0">
 				<div className=" flex flex-col gap-8">
 					<Link className="flex items-center gap-2 text-foreground" href="/">
 						<Image
@@ -40,7 +39,7 @@ export default function Footer({ isHome }: { isHome: boolean }) {
 				</div>
 				<div className="flex items-start gap-20 justify-between">
 					<div className="flex flex-col gap-2">
-						<h2 className="text-2xl text-foreground font-semibold mb-4">
+						<h2 className="text-base sm:text-2xl text-foreground font-semibold mb-4">
 							Social
 						</h2>
 						<Link
@@ -53,13 +52,17 @@ export default function Footer({ isHome }: { isHome: boolean }) {
 						<Link className="text-muted-foreground" href="#" target="_blank">
 							Discord
 						</Link>
-						<Link className="text-muted-foreground" href="#" target="_blank">
+						<Link
+							className="text-muted-foreground"
+							href="https://www.linkedin.com/company/leaf-pallete"
+							target="_blank"
+						>
 							Linkedin
 						</Link>
 					</div>
 					<div>
 						<div className="flex flex-col gap-2">
-							<h2 className="text-2xl text-foreground font-semibold w-1/2 mb-4">
+							<h2 className="text-base sm:text-2xl text-foreground font-semibold w-1/2 mb-4">
 								Important links
 							</h2>
 							<Link className="text-muted-foreground" href="#">
