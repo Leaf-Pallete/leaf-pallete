@@ -12,11 +12,14 @@ type CardProps = {
 
 const Card = ({ title, description, imgsrc, className }: CardProps) => {
 	return (
-		<div className={cn("border border-border rounded-md shadow-sm", className)}>
+		<div
+			className={cn("border border-border rounded-md shadow-sm ", className)}
+		>
 			<Link href="#">
 				{imgsrc && (
 					<div className="flex justify-center">
 						<Image
+							className="p-6 pb-3"
 							src={imgsrc}
 							alt="image of different style of buttons"
 							width={265}
