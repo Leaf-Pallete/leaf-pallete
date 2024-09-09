@@ -46,7 +46,7 @@ export const CardDesignStyles = () => {
 								Design Styles
 							</p>
 							<div className=" w-[170px] sm:w-[270px] relative bottom-1">
-								<p className="text-sm font-semibold text-muted-foreground">
+								<p className="text-xs font-semibold text-muted-foreground">
 									Learn techniques to craft consistent and visually appealing
 									interfaces
 								</p>
@@ -55,8 +55,8 @@ export const CardDesignStyles = () => {
 					</div>
 					<div className="flex items-center">
 						<Link
-							href="#"
-							className={`${cn(buttonVariants({ variant: "default" }))} sm:px-[26px] font-medium`}
+							href="/styles-module"
+							className={`${cn(buttonVariants({ variant: "default", size: "sm" }))}`}
 						>
 							Learn more
 						</Link>

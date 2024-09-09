@@ -24,9 +24,9 @@ export const CardUiComponents = () => {
 							</Link>
 						</div>
 					</div>
-					<div className="hidden pl-4 sm:pl-5 sm:flex flex-col pt-[10px] sm:pt-[48px]">
+					<div className="pl-4 sm:pl-5 sm:flex flex-col pt-[10px] sm:pt-[48px]">
 						<Image
-							src="/image-card-ui-components.png"
+							src="/image-components.svg"
 							alt=""
 							title=""
 							width={457}
@@ -55,7 +55,7 @@ export const CardUiComponents = () => {
 								UI Components
 							</p>
 							<div className=" w-[170px] sm:w-[270px] relative bottom-1">
-								<p className="text-sm font-semibold text-muted-foreground">
+								<p className="text-xs font-semibold text-muted-foreground">
 									Explore the best techniques for creating intuitive and
 									accessible components.
 								</p>
@@ -64,8 +64,8 @@ export const CardUiComponents = () => {
 					</div>
 					<div className="flex items-center">
 						<Link
-							href="#"
-							className={`${cn(buttonVariants({ variant: "default" }))} text-[8px] sm:px-[26px] font-medium`}
+							href="/components-module"
+							className={`${cn(buttonVariants({ variant: "default", size: "sm" }))}`}
 						>
 							Learn more
 						</Link>
