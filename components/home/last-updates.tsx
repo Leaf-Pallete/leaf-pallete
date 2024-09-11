@@ -1,5 +1,10 @@
+"use client";
+
 import React from "react";
 import Card from "./card";
+
+import { useClient } from "@/hook/useClient";
+import { CardSkeletonWithImage } from "../shared/CardSkeletonWithImage";
 
 const lastUpdatesCardsData = [
 	{
@@ -33,11 +38,14 @@ const lastUpdatesCardsData = [
 ];
 
 const LastUpdates = () => {
+	const { isClient } = useClient();
+
 	return (
 		<section className="pt-10 sm:pt-16 md:pt-20 w-full max-w-[1240px]">
 			<h2 className="text-foreground text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">
 				Last Updates
 			</h2>
+			{!isClient && <CardSkeletonWithImage />}
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
 				{lastUpdatesCardsData.map((item) => (
 					<Card key={item.id} {...item} />
