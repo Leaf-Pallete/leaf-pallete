@@ -6,7 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
+		"lint": "biome ci .",
+		"format": "biome format . --write",
 		"test:e2e": "bun playwright test"
 	},
 	"dependencies": {

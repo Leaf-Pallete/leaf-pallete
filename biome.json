@@ -21,7 +21,7 @@
 	"formatter": {
 		"enabled": true,
 		"formatWithErrors": false,
-		"ignore": [],
+		"ignore": ["**/*.css"],
 		"attributePosition": "auto",
 		"indentStyle": "tab",
 		"indentWidth": 2,
