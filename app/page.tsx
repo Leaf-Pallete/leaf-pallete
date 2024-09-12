@@ -1,7 +1,7 @@
 import { CardDesignStyles } from "@/components/home/card-design-styles/CardDesignStyles";
 import { CardUiComponents } from "@/components/home/card-ui-components/CardUiComponents";
 import Hero from "@/components/home/hero-section/Hero";
-import LastUpdates from "@/components/home/last-updates";
+import { LastUpdates } from "@/components/home/last-updates";
 import Resources from "@/components/home/resources";
 import FooterHome from "@/components/shared/FooterHome";
 import Header from "@/components/shared/Header";
