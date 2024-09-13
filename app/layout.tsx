@@ -28,7 +28,7 @@ export default function RootLayout({
 			<body className={inter.className}>
 				<ThemeProvider
 					attribute="class"
-					defaultTheme={env.NEXT_PUBLIC_THEME_MODE}
+					defaultTheme="system"
 					enableColorScheme
 					disableTransitionOnChange
 					enableSystem
