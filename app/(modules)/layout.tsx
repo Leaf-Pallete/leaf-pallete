@@ -1,4 +1,4 @@
-import Footer from "@/components/shared/Footer";
+import FooterModules from "@/components/shared/Footer";
 import Header from "@/components/shared/Header";
 import Sidebar from "@/components/shared/Sidebar";
 
@@ -14,7 +14,7 @@ export default function ModulesLayout({
 				<Sidebar />
 				<div className="flex flex-col w-full">
 					<main className="px-6 py-8 w-full h-full">{children}</main>
-					<Footer isHome={false} />
+					<FooterModules />
 				</div>
 			</div>
 		</div>

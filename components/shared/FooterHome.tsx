@@ -1,39 +1,30 @@
 "use client";
-import * as I from "@radix-ui/react-icons";
-import { useTheme } from "next-themes";
-import Image from "next/image";
+import {
+	DiscordLogoIcon,
+	GitHubLogoIcon,
+	LinkedInLogoIcon,
+} from "@radix-ui/react-icons";
 import Link from "next/link";
+import Logo from "./Logo";
 
 export default function FooterHome() {
-	const { resolvedTheme } = useTheme();
-	const logoSrc =
-		resolvedTheme === "dark" ? "/logo-dark.svg" : "/logo-light.svg";
-
 	return (
 		<section className="w-full bg-muted">
 			<div className="flex flex-col md:flex-row gap-6 items-start justify-between py-8 md:py-20 md:max-w-[1240px] mx-auto px-6 lg:px-0">
 				<div className=" flex flex-col gap-8">
-					<Link className="flex items-center gap-2 text-foreground" href="/">
-						<Image
-							width={41}
-							height={41}
-							src={logoSrc}
-							alt="logo leaf pallete"
-						/>
-						Leaf Pallete
-					</Link>
+					<Logo logoSize={41} />
 					<p className="text-sm text-muted-foreground font-semibold w-3/4">
 						Empowering designers to create exceptional web experiences
 					</p>
 					<div className="flex gap-6">
 						<Link href="#" target="_blank">
-							<I.LinkedInLogoIcon className="size-6" />
+							<LinkedInLogoIcon className="size-6" />
 						</Link>
 						<Link href="#" target="_blank">
-							<I.DiscordLogoIcon className="size-6" />
+							<DiscordLogoIcon className="size-6" />
 						</Link>
 						<Link href="https://github.com/Leaf-Pallete" target="_blank">
-							<I.GitHubLogoIcon className="size-6" />
+							<GitHubLogoIcon className="size-6" />
 						</Link>
 					</div>
 				</div>
