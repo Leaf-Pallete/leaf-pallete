@@ -7,7 +7,7 @@ Leaf Palette é uma plataforma onde exploramos os componentes de design web mode
 * Melhores cores e combinações
 * Animações e interações
 * Tamanhos ideais para diferentes dispositivos
-* Práticas recomendadas para UI/UX
+* Práticas recomendadas para UI/UX.
 
 Nossa missão é ser um ponto de consulta constante para novos designers, ajudando-os a desenvolver suas habilidades e a criar designs de alta qualidade.
 
