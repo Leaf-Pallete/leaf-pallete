@@ -4,7 +4,7 @@ Leaf Palette é uma comunidade e projeto colaborativo focado em fornecer dicas v
 # 🎨 Sobre o Projeto
 Leaf Palette é uma plataforma onde exploramos os componentes de design web modernos, abordando:
 
-* Melhores cores e combinações
+* Melhores cores e combinações.
 * Animações e interações
 * Tamanhos ideais para diferentes dispositivos
 * Práticas recomendadas para UI/UX
