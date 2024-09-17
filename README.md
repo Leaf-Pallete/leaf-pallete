@@ -71,3 +71,8 @@ Feito! Agora vá para a página do repositório no GitHub e clique no botão **C
 ## 📝 Licença
 
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+
+## 🤖 Leafy Bot
+
+Para aumentar o engajamento da nossa comunidade, criamos o Leafy Bot, um bot do Discord dedicado a ajudar e interagir com nossos membros. Confira o Leafy Bot e contribua para o seu desenvolvimento em nosso [repositório no GitHub](https://github.com/Leaf-Pallete/leafy-bot).
