@@ -27,7 +27,7 @@ git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
 ```
 
-## Instalando as dependências 
+## Instalando as dependências
 Depois do clone, instalamos as dependências para garantir que o projeto tenha todas as bibliotecas e pacotes necessários para rodar corretamente.
 
 ```bash
