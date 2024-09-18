@@ -5,7 +5,7 @@ export default function ComponentsModulePage() {
 	return (
 		<main>
 			<HeroComponent />
-			<ComponentsCard/>
+			<ComponentsCard />
 		</main>
 	);
 }
