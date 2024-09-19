@@ -23,7 +23,7 @@ export const headerLinks: HeaderLink[] = [
 	},
 	{
 		id: 4,
-		href: "#",
+		href: "/about",
 		title: "Click here to go to About Us",
 		text: "About Us",
 	},

@@ -17,45 +17,67 @@ export default function FooterModules() {
 						Empowering designers to create exceptional web experiences
 					</p>
 					<div className="flex gap-6">
-						<Link href="#" target="_blank">
-							<LinkedInLogoIcon className="size-6" />
+						<Link
+							href="https://www.linkedin.com/company/leaf-pallete"
+							target="_blank"
+							className=" duration-300"
+						>
+							<LinkedInLogoIcon className="size-6 hover:text-primary transition-colors duration-300" />
 						</Link>
-						<Link href="#" target="_blank">
-							<DiscordLogoIcon className="size-6" />
+						<Link href="#" target="_blank" className="">
+							<DiscordLogoIcon className="size-6 hover:text-primary transition-colors duration-300" />
 						</Link>
-						<Link href="https://github.com/Leaf-Pallete" target="_blank">
+						<Link
+							href="https://github.com/Leaf-Pallete"
+							target="_blank"
+							className="hover:text-primary transition-colors duration-300"
+						>
 							<GitHubLogoIcon className="size-6" />
 						</Link>
 					</div>
 				</div>
 				<div className="flex items-start gap-20 justify-between">
 					<div className="flex flex-col gap-2">
-						<h2 className="text-2xl text-foreground font-semibold mb-4">
+						<h2 className="text-lg text-foreground font-semibold mb-4">
 							Social
 						</h2>
 						<Link
-							className="text-muted-foreground"
+							className="text-muted-foreground hover:text-foreground"
 							href="https://github.com/Leaf-Pallete"
 							target="_blank"
 						>
 							GitHub
 						</Link>
-						<Link className="text-muted-foreground" href="#" target="_blank">
+						<Link
+							className="text-muted-foreground hover:text-foreground"
+							href="#"
+							target="_blank"
+						>
 							Discord
 						</Link>
-						<Link className="text-muted-foreground" href="#" target="_blank">
+						<Link
+							className="text-muted-foreground hover:text-foreground"
+							href="#"
+							target="_blank"
+						>
 							Linkedin
 						</Link>
 					</div>
 					<div>
 						<div className="flex flex-col gap-2">
-							<h2 className="text-2xl text-foreground font-semibold w-1/2 mb-4">
+							<h2 className="text-lg text-foreground font-semibold w-1/2 mb-4">
 								Important links
 							</h2>
-							<Link className="text-muted-foreground" href="#">
+							<Link
+								className="text-muted-foreground hover:text-foreground"
+								href="#"
+							>
 								About us
 							</Link>
-							<Link className="text-muted-foreground" href="#">
+							<Link
+								className="text-muted-foreground hover:text-foreground"
+								href="#"
+							>
 								Contact Us
 							</Link>
 						</div>
