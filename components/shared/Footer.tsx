@@ -57,7 +57,7 @@ export default function FooterModules() {
 						</Link>
 						<Link
 							className="text-muted-foreground hover:text-foreground"
-							href="#"
+							href="https://www.linkedin.com/company/leaf-pallete"
 							target="_blank"
 						>
 							Linkedin
@@ -70,15 +70,9 @@ export default function FooterModules() {
 							</h2>
 							<Link
 								className="text-muted-foreground hover:text-foreground"
-								href="#"
+								href="/about"
 							>
 								About us
-							</Link>
-							<Link
-								className="text-muted-foreground hover:text-foreground"
-								href="#"
-							>
-								Contact Us
 							</Link>
 						</div>
 					</div>
