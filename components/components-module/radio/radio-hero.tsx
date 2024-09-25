@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import React from "react";
+import { Skeleton } from "@/components/ui/skeleton";
 import { useClient } from "@/hook/useClient";
 import { useTheme } from "next-themes";
-import { Skeleton } from "@/components/ui/skeleton";
+import Image from "next/image";
+import React from "react";
 
 const RadioHero = () => {
 	return (
