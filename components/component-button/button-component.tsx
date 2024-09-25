@@ -151,7 +151,7 @@ export const ButtonComponent = () => {
 					button's width adjusts.
 				</p>
 				<Image
-					className="mx-auto pt-4 sm:pt-8-mx-0"
+					className="mx-auto pt-4 sm:pt-8 sm:mx-0"
 					src={
 						resolvedTheme === "dark"
 							? "/component-button/practices-component-dark.png"
@@ -165,7 +165,7 @@ export const ButtonComponent = () => {
 					Other options that should NOT be used with the button:
 				</p>
 				<Image
-					className="mx-auto pb-12 pt-4 sm:pt-8-mx-0"
+					className="mx-auto pb-12 pt-4 sm:pt-8 sm:mx-0"
 					src={
 						resolvedTheme === "dark"
 							? "/component-button/practices2-component-dark.png"
