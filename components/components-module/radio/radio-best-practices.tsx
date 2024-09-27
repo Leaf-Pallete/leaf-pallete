@@ -1,44 +1,35 @@
-"use client";
-
-import { Skeleton } from "@/components/ui/skeleton";
-import { useClient } from "@/hook/useClient";
-import { useTheme } from "next-themes";
+import type { ImageProps } from "@/types";
 import Image from "next/image";
 
-interface ImageProps {
-	id: number;
-	src: string;
-	srcDark: string;
-	width: number;
-	height: number;
-}
-
-const images: ImageProps[] = [
+const images1: ImageProps[] = [
 	{
-		id: 1,
-		src: "/components-module/radio/best-pratices-1.svg",
-		srcDark: "/components-module/radio/best-pratices-1-dark.svg",
+		description: "Image 1: Correct example of using the Radio component",
+		imgLight: "/components-module/radio/best-pratices-1.svg",
+		imgDark: "/components-module/radio/best-pratices-1-dark.svg",
 		width: 150,
 		height: 154,
 	},
 	{
-		id: 2,
-		src: "/components-module/radio/best-pratices-2.svg",
-		srcDark: "/components-module/radio/best-pratices-2-dark.svg",
+		description: "Image 2: Incorrect example of using the Radio component",
+		imgLight: "/components-module/radio/best-pratices-2.svg",
+		imgDark: "/components-module/radio/best-pratices-2-dark.svg",
 		width: 330,
 		height: 89,
 	},
+];
+
+const images2: ImageProps[] = [
 	{
-		id: 3,
-		src: "/components-module/radio/best-pratices-3.svg",
-		srcDark: "/components-module/radio/best-pratices-3-dark.svg",
+		description: "Image 3: Incorrect use of Radio for multiple selection",
+		imgLight: "/components-module/radio/best-pratices-3.svg",
+		imgDark: "/components-module/radio/best-pratices-3-dark.svg",
 		width: 188,
-		height: 192,
+		height: 192
 	},
 	{
-		id: 4,
-		src: "/components-module/radio/best-pratices-4.svg",
-		srcDark: "/components-module/radio/best-pratices-4-dark.svg",
+		description: "Image 4: Incorrect use of Radio with subordinate items",
+		imgLight: "/components-module/radio/best-pratices-4.svg",
+		imgDark: "/components-module/radio/best-pratices-4-dark.svg",
 		width: 188,
 		height: 217,
 	},
@@ -47,27 +38,57 @@ const images: ImageProps[] = [
 const RadioBestPractices = () => {
 	return (
 		<div className="flex flex-col items-start sm:items-center lg:items-start text-start sm:text-center lg:text-start gap-5">
-			<h2 className="text-2xl font-semibold">Best Practices:</h2>
-			<p className="text-regular lg:text-lg 2xl:text-xl w-full text-foreground lg:mx-0">
+			<h2 className="text-2xl font-semibold text-left">Best Practices:</h2>
+			<p className="text-xl w-full text-foreground lg:mx-0">
 				The default is to place radio button items one below the other, not side
 				by side. Image 1 (Done) shows the correct way, while Image 2 (Error)
 				shows a non-recommended position.
 			</p>
 			<div className="flex flex-col items-center lg:flex-row lg:items-center w-full gap-14">
-				{images.slice(0, 2).map((image) => (
-					<RadioBestPracticesFallback key={image.id} image={image} />
-				))}
+				{images1.map((image) => (
+					<div key={image.description} className="relative" style={{ width: image.width, height: image.height }}>
+						<Image
+							src={image.imgDark}
+							alt={image.description}
+							layout="fill"
+							objectFit="contain"
+							className="hidden dark:block"
+						/>
+						<Image
+							src={image.imgLight}
+							alt={image.description}
+							layout="fill"
+							objectFit="contain"
+							className="block dark:hidden"
+						/>
+					</div>
+			))}
 			</div>
 			<p className="text-regular lg:text-lg 2xl:text-xl w-full text-foreground lg:mx-0">
 				Other options that should <span className="font-semibold">NOT</span> be
 				used with radio buttons:
 			</p>
 			<div className="flex flex-col items-center lg:flex-row lg:items-start w-full gap-14">
-				{images.slice(2).map((image) => (
-					<RadioBestPracticesFallback key={image.id} image={image} />
+				{images2.map((image) => (
+					<div key={image.description} className="relative" style={{ width: image.width, height: image.height }}>
+						<Image
+							src={image.imgDark}
+							alt={image.description}
+							width={image.width}
+							height={image.height}
+							className="hidden dark:block"
+						/>
+						<Image
+							src={image.imgLight}
+							alt={image.description}
+							width={image.width}
+							height={image.height}
+							className="block dark:hidden"
+						/>
+					</div>
 				))}
 			</div>
-			<ul className="flex flex-col gap-2 pl-5 list-disc">
+			<ul className="flex flex-col gap-2 pl-5 list-disc text-xl">
 				<li>
 					In Card 1, we have the case where the tool is used incorrectly for
 					selecting multiple items. For this function, there is a more
@@ -80,41 +101,6 @@ const RadioBestPractices = () => {
 			</ul>
 		</div>
 	);
-};
-
-interface RadioBestPracticesFallbackProps {
-	image: ImageProps;
-}
-
-const RadioBestPracticesFallback = ({
-	image,
-}: RadioBestPracticesFallbackProps) => {
-	const { isClient } = useClient();
-	const { resolvedTheme } = useTheme();
-
-	if (!isClient) {
-		return <BestPracticesFallback width={image.width} height={image.height} />;
-	}
-
-	const getImageSrc = (lightSrc: string, darkSrc: string) => {
-		return resolvedTheme === "dark" ? darkSrc : lightSrc;
-	};
-
-	return (
-		<Image
-			src={getImageSrc(image.src, image.srcDark)}
-			alt={`Radio Best Practices ${image.src?.split("-").pop()?.split(".")[0] ?? ""}`}
-			width={image.width}
-			height={image.height}
-		/>
-	);
-};
-
-const BestPracticesFallback = ({
-	width,
-	height,
-}: { width: number; height: number }) => {
-	return <Skeleton style={{ width: `${width}px`, height: `${height}px` }} />;
 };
 
 export default RadioBestPractices;

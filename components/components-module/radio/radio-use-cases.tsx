@@ -1,12 +1,8 @@
+import type { RadioUseCase } from "@/types";
 import React from "react";
 
-interface UseCase {
-	id: number;
-	text: string;
-	description: string;
-}
 
-const useCases: UseCase[] = [
+const useCases: RadioUseCase[] = [
 	{
 		id: 1,
 		text: "Surveys and Questionnaires",
@@ -63,18 +59,18 @@ const useCases: UseCase[] = [
 const RadioUseCases = () => {
 	return (
 		<div className="flex flex-col items-start sm:items-center lg:items-start text-start sm:text-center lg:text-start gap-5">
-			<h2 className="text-2xl font-semibold">Use Cases</h2>
-			<p className="text-regular lg:text-lg 2xl:text-xl w-full text-foreground lg:mx-0">
+			<h2 className="text-2xl font-semibold ">Use Cases</h2>
+			<p className="text-xl w-full text-foreground lg:mx-0">
 				Radio buttons are commonly used in various contexts, especially in user
 				interfaces (UI) and digital forms. They are used when the user needs to
 				select a single option from several available. Here are some examples of
 				where radio buttons are frequently used:
 			</p>
-			<ol className="flex flex-col gap-6 list-decimal list-inside">
+			<ol className="flex flex-col gap-6 list-decimal list-inside sm:flex-row sm:flex-wrap sm:gap-4 lg:gap-6 justify-center items-center">
 				{useCases.map((useCase) => (
-					<li key={useCase.id} className="flex items-start text-xl">
-						<div className="flex flex-col ml-2">
-							<span className="font-bold">
+					<li key={useCase.id} className="flex items-start lg:w-full">
+						<div className="text-xl ml-2">
+							<span className="font-semibold">
 								{useCase.id} - {useCase.text}:
 							</span>{" "}
 							<span>{useCase.description}</span>
@@ -82,7 +78,7 @@ const RadioUseCases = () => {
 					</li>
 				))}
 			</ol>
-			<p className="text-regular lg:text-lg 2xl:text-xl w-full text-foreground lg:mx-0">
+			<p className="text-xl w-full text-foreground lg:mx-0">
 				These are some common examples, but radio buttons can be used in any
 				situation where it's necessary to ensure that only one option is
 				selected from a group.

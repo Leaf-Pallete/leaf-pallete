@@ -5,7 +5,7 @@ import RadioUseCases from "@/components/components-module/radio/radio-use-cases"
 
 const Radio = () => {
 	return (
-		<div className="flex flex-col mx-auto gap-8">
+		<div className="flex flex-col mx-auto gap-6">
 			<RadioHero />
 			<RadioUseCases />
 			<RadioAnatomy />
