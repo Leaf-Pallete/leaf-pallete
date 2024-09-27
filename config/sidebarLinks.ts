@@ -69,7 +69,7 @@ export const sidebarLinks: SidebarSection[] = [
 				href: "components-module/radio",
 				title: "Radio Component",
 				text: "Radio",
-			}
+			},
 		],
 	},
 	{

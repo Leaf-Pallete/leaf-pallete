@@ -1,7 +1,6 @@
 import type { RadioUseCase } from "@/types";
 import React from "react";
 
-
 const useCases: RadioUseCase[] = [
 	{
 		id: 1,

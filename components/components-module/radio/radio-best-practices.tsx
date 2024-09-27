@@ -24,7 +24,7 @@ const images2: ImageProps[] = [
 		imgLight: "/components-module/radio/best-pratices-3.svg",
 		imgDark: "/components-module/radio/best-pratices-3-dark.svg",
 		width: 188,
-		height: 192
+		height: 192,
 	},
 	{
 		description: "Image 4: Incorrect use of Radio with subordinate items",
@@ -46,7 +46,11 @@ const RadioBestPractices = () => {
 			</p>
 			<div className="flex flex-col items-center lg:flex-row lg:items-center w-full gap-14">
 				{images1.map((image) => (
-					<div key={image.description} className="relative" style={{ width: image.width, height: image.height }}>
+					<div
+						key={image.description}
+						className="relative"
+						style={{ width: image.width, height: image.height }}
+					>
 						<Image
 							src={image.imgDark}
 							alt={image.description}
@@ -62,7 +66,7 @@ const RadioBestPractices = () => {
 							className="block dark:hidden"
 						/>
 					</div>
-			))}
+				))}
 			</div>
 			<p className="text-regular lg:text-lg 2xl:text-xl w-full text-foreground lg:mx-0">
 				Other options that should <span className="font-semibold">NOT</span> be
@@ -70,7 +74,11 @@ const RadioBestPractices = () => {
 			</p>
 			<div className="flex flex-col items-center lg:flex-row lg:items-start w-full gap-14">
 				{images2.map((image) => (
-					<div key={image.description} className="relative" style={{ width: image.width, height: image.height }}>
+					<div
+						key={image.description}
+						className="relative"
+						style={{ width: image.width, height: image.height }}
+					>
 						<Image
 							src={image.imgDark}
 							alt={image.description}

@@ -43,7 +43,6 @@ export interface CardProps {
 	imgDark: string;
 }
 
-
 export interface RadioUseCase {
 	id: number;
 	text: string;
