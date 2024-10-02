@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import { data } from "@/config/component-button/useCasesData";
 import { imageSections } from "@/config/component-button/imageSections";
+import { data } from "@/config/component-button/useCasesData";
+import Image from "next/image";
 
 export const ButtonComponent = () => {
 	return (
