@@ -1,8 +1,8 @@
-import { CardDesignStyles } from "@/components/Home/card-design-styles/CardDesignStyles";
-import { CardUiComponents } from "@/components/Home/card-ui-components/CardUiComponents";
-import Hero from "@/components/Home/hero-section/Hero";
-import { LastUpdates } from "@/components/Home/last-updates";
-import Resources from "@/components/Home/resources";
+import { CardDesignStyles } from "@/components/home/card-design-styles/CardDesignStyles";
+import { CardUiComponents } from "@/components/home/card-ui-components/CardUiComponents";
+import Hero from "@/components/home/hero-section/Hero";
+import { LastUpdates } from "@/components/home/last-updates";
+import Resources from "@/components/home/resources";
 import FooterHome from "@/components/shared/FooterHome";
 import Header from "@/components/shared/Header";
 
