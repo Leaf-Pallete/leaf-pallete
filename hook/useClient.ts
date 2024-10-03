@@ -2,11 +2,11 @@
 import { useEffect, useState } from "react";
 
 export const useClient = () => {
-	const [isClient, setIsClient] = useState<boolean>(false);
+  const [isClient, setIsClient] = useState<boolean>(false);
 
-	useEffect(() => {
-		setIsClient(true);
-	});
+  useEffect(() => {
+    setIsClient(true);
+  });
 
-	return { isClient };
+  return { isClient };
 };
