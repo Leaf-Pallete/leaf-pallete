@@ -64,6 +64,12 @@ export const sidebarLinks: SidebarSection[] = [
 				title: "Popover Component",
 				text: "Popover",
 			},
+			{
+				id: 11,
+				href: "components-module/radio",
+				title: "Radio Component",
+				text: "Radio",
+			},
 		],
 	},
 	{
