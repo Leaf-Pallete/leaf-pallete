@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const ButtonComponent = () => {
 	return (
-		<div className="max-w-full sm:max-w-[1200px] p-4 sm:p-8">
+		<div className="max-w-full sm:max-w-[1200px]">
 			<div>
 				<h2 className="text-3xl sm:text-6xl text-foreground font-semibold">
 					Button
