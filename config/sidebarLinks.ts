@@ -64,6 +64,12 @@ export const sidebarLinks: SidebarSection[] = [
 				title: "Popover Component",
 				text: "Popover",
 			},
+			{
+				id: 11,
+				href: "/components-module/mobile-menu",
+				title: "Mobile Menu component",
+				text: "Mobile Menu",
+			},
 		],
 	},
 	{
