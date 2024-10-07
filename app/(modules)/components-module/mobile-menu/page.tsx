@@ -1,10 +1,10 @@
-import React from "react";
 import {
-  Hero,
-  UseCases,
   Anatomy,
   BestPractices,
+  Hero,
+  UseCases,
 } from "@/components/components-module/mobile-menu";
+import React from "react";
 
 const MobileMenu = () => {
   return (
