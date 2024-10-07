@@ -55,3 +55,17 @@ export interface ImageSections {
 	imgDark: string;
 	altText: string;
 }
+
+export interface RadioUseCase {
+	id: number;
+	text: string;
+	description: string;
+}
+
+export interface ImageProps {
+	description: string;
+	imgLight: string;
+	imgDark: string;
+	width: number;
+	height: number;
+}
