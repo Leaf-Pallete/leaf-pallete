@@ -42,3 +42,9 @@ export interface CardProps {
 	imgLight: string;
 	imgDark: string;
 }
+
+export type NumberedList = {
+  id: number;
+  title?: string;
+  description: string;
+}
