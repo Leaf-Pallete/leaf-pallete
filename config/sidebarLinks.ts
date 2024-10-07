@@ -36,7 +36,7 @@ export const sidebarLinks: SidebarSection[] = [
       },
       {
         id: 6,
-        href: "#",
+        href: "/components-module/button",
         title: "Button Component",
         text: "Button",
       },
@@ -66,10 +66,16 @@ export const sidebarLinks: SidebarSection[] = [
       },
       {
         id: 11,
+        href: "/components-module/radio",
+        title: "Radio Component",
+        text: "Radio",
+      },
+      {
+        id: 12,
         href: "/components-module/mobile-menu",
         title: "Mobile Menu component",
         text: "Mobile Menu",
-      },
+      }
     ],
   },
   {
