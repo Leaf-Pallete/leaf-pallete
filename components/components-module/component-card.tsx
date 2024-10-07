@@ -46,14 +46,14 @@ const cardsData = [
   },
   {
     id: 5,
-    title: "Calender",
+    title: "Calendar",
     description: "Create intuitive, accessible buttons that drive action.",
     imgsrc: "/components-module/component-module-5.svg",
     imgDarkSrc: "/components-module/component-module-5-dark.svg",
   },
   {
     id: 6,
-    title: "Menu Mobile",
+    title: "Mobile Menu",
     description: "Create intuitive, accessible buttons that drive action.",
     imgsrc: "/components-module/component-module-6.svg",
     imgDarkSrc: "/components-module/component-module-6-dark.svg",

@@ -69,3 +69,9 @@ export interface ImageProps {
   width: number;
   height: number;
 }
+
+export type NumberedList = {
+  id: number;
+  title?: string;
+  description: string;
+};
