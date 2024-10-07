@@ -9,7 +9,7 @@ import React from "react";
 
 const Hero = () => {
 	return (
-		<section className="flex flex-col gap-2">
+		<section className="flex flex-col gap-4">
 			<h1 className="text-4xl sm:text-6xl font-semibold">Mobile Menu</h1>
 			<p className="">
 				A mobile menu is a navigation solution designed specifically for mobile

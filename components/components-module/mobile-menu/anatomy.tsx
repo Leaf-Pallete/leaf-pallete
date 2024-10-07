@@ -23,7 +23,7 @@ const anatomyItems: NumberedList[] = [
 
 const Anatomy = () => {
 	return (
-		<section className="flex flex-col gap-2">
+		<section className="flex flex-col gap-4">
 			<h2 className="font-semibold text-2xl">Anatomy</h2>
 			<Image
 				src={anatomy}

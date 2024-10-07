@@ -36,7 +36,7 @@ const numberedLists: NumberedList[] = [
 
 const UseCases = () => {
 	return (
-		<section className="flex flex-col gap-2">
+		<section className="flex flex-col gap-4">
 			<h2 className="text-2xl font-semibold">Use Cases</h2>
 			<p>
 				A mobile menu is a navigation tool designed for smartphones and tablets,

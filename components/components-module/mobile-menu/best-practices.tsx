@@ -9,7 +9,7 @@ import React from "react";
 
 const BestPractices = () => {
 	return (
-		<section className="flex flex-col gap-2">
+		<section className="flex flex-col gap-4">
 			<h2 className="text-2xl font-semibold">Best Practices</h2>
 			<p>
 				The default is to display the mobile menu in a compact and accessible
