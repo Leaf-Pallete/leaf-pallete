@@ -43,6 +43,19 @@ export interface CardProps {
 	imgDark: string;
 }
 
+export interface UseCasesData {
+	id: number;
+	title: string;
+	description: string;
+}
+
+export interface ImageSections {
+	id: number;
+	imgLight: string;
+	imgDark: string;
+	altText: string;
+}
+
 export interface RadioUseCase {
 	id: number;
 	text: string;

@@ -36,7 +36,7 @@ export const sidebarLinks: SidebarSection[] = [
 			},
 			{
 				id: 6,
-				href: "#",
+				href: "/components-module/button",
 				title: "Button Component",
 				text: "Button",
 			},
