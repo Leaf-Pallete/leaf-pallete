@@ -44,7 +44,7 @@ const UseCases = () => {
 				compact and user-friendly manner. It adapts to small screens and
 				typically includes various styles such as:
 			</p>
-			<ul>
+			<ul className="flex flex-col gap-4">
 				{numberedLists.map((item) => (
 					<li key={item.id}>
 						<span className="font-semibold">
