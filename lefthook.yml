@@ -13,6 +13,7 @@
 #       run: bundle audit
 #
 pre-commit:
+  parallel: true
   commands:
     check:
       glob: '*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}'

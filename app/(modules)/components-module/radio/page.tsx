@@ -4,14 +4,14 @@ import RadioHero from "@/components/components-module/radio/radio-hero";
 import RadioUseCases from "@/components/components-module/radio/radio-use-cases";
 
 const Radio = () => {
-	return (
-		<div className="flex flex-col mx-auto gap-6">
-			<RadioHero />
-			<RadioUseCases />
-			<RadioAnatomy />
-			<RadioBestPractices />
-		</div>
-	);
+  return (
+    <div className="flex flex-col mx-auto gap-6">
+      <RadioHero />
+      <RadioUseCases />
+      <RadioAnatomy />
+      <RadioBestPractices />
+    </div>
+  );
 };
 
 export default Radio;

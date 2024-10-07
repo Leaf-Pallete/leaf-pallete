@@ -2,10 +2,10 @@ import { ContainerCardsStyles } from "@/components/styles-module/ContainerCardsS
 import { MainStyles } from "@/components/styles-module/MainStyles";
 
 export default function StylesModulePage() {
-	return (
-		<main>
-			<MainStyles />
-			<ContainerCardsStyles />
-		</main>
-	);
+  return (
+    <main>
+      <MainStyles />
+      <ContainerCardsStyles />
+    </main>
+  );
 }
