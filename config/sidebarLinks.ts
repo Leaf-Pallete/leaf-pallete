@@ -70,6 +70,12 @@ export const sidebarLinks: SidebarSection[] = [
         title: "Radio Component",
         text: "Radio",
       },
+      {
+        id: 12,
+        href: "/components-module/mobile-menu",
+        title: "Mobile Menu component",
+        text: "Mobile Menu",
+      },
     ],
   },
   {

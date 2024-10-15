@@ -1,0 +1,10 @@
+export { default as heroDesktop } from "./hero-desktop.png";
+export { default as heroDesktopDark } from "./hero-desktop-dark.png";
+export { default as heroMobile } from "./hero-mobile.png";
+export { default as heroMobileDark } from "./hero-mobile-dark.png";
+export { default as anatomy } from "./anatomy.png";
+export { default as anatomyDark } from "./anatomy-dark.png";
+export { default as bestPracticesGood } from "./best-practices-good.png";
+export { default as bestPracticesGoodDark } from "./best-practices-good-dark.png";
+export { default as bestPracticesBad } from "./best-practices-bad.png";
+export { default as bestPracticesBadDark } from "./best-practices-bad-dark.png";
