@@ -75,7 +75,7 @@ export const sidebarLinks: SidebarSection[] = [
         href: "/components-module/mobile-menu",
         title: "Mobile Menu component",
         text: "Mobile Menu",
-      }
+      },
     ],
   },
   {

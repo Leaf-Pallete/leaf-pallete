@@ -9,9 +9,9 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col gap-4">
+    <header className="flex flex-col gap-4">
       <h1 className="text-4xl sm:text-6xl font-semibold">Mobile Menu</h1>
-      <p className="">
+      <p>
         A mobile menu is a navigation solution designed specifically for mobile
         devices, making it easy to access different parts of a website or app in
         a compact and efficient manner. Tailored for smaller screens, it
@@ -19,7 +19,7 @@ const Hero = () => {
         expandable menus, and floating buttons, ensuring users can explore
         content effortlessly and with an optimized experience.
       </p>
-      <div className="">
+      <div>
         <Image
           src={heroMobile}
           alt=""
@@ -41,7 +41,7 @@ const Hero = () => {
           className="hidden sm:dark:block mx-auto w-full max-w-[1047px]"
         />
       </div>
-    </section>
+    </header>
   );
 };
 

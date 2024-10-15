@@ -24,7 +24,7 @@ export default function FooterModules() {
             >
               <LinkedInLogoIcon className="size-6 hover:text-primary transition-colors duration-300" />
             </Link>
-            <Link href="#" target="_blank" className="">
+            <Link href="#" target="_blank">
               <DiscordLogoIcon className="size-6 hover:text-primary transition-colors duration-300" />
             </Link>
             <Link
