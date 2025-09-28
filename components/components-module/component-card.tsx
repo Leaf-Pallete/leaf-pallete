@@ -84,12 +84,9 @@ const CardGrid = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 md:gap-6">
       {cardsData.map(({ id, imgDarkSrc, imgsrc, title, description, link }) => (
-        <Card
-          key={id}
-          className="bg-card hover:scale-105 transition delay-150 duration-300 ease-in-out"
-        >
-          <div className="relative w-full h-[125px] border-b">
-            <Link href={link || "#"}>
+        <Link key={id} href={link || "#"}>
+          <Card className="bg-card hover:scale-105 transition delay-150 duration-300 ease-in-out">
+            <div className="relative w-full h-[125px] border-b">
               <Image
                 src={resolvedTheme === "dark" ? imgDarkSrc : imgsrc}
                 alt={`Image for ${title}`}
@@ -98,15 +95,15 @@ const CardGrid = () => {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority
               />
-            </Link>
-          </div>
-          <CardHeader className="px-6 pb-2 pt-3">
-            <CardTitle className="text-foreground text-xl">{title}</CardTitle>
-          </CardHeader>
-          <CardContent className="px-6 pb-9">
-            <p className="text-muted-foreground text-base">{description}</p>
-          </CardContent>
-        </Card>
+            </div>
+            <CardHeader className="px-6 pb-2 pt-3">
+              <CardTitle className="text-foreground text-xl">{title}</CardTitle>
+            </CardHeader>
+            <CardContent className="px-6 pb-9">
+              <p className="text-muted-foreground text-base">{description}</p>
+            </CardContent>
+          </Card>
+        </Link>
       ))}
     </div>
   );
