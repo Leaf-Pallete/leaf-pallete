@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Skeleton } from "../ui/skeleton";
+import { Link2Icon } from "@radix-ui/react-icons";
 
 export interface CardData {
   id: number;
@@ -13,6 +14,7 @@ export interface CardData {
   description: string;
   imgsrc?: string;
   imgDarkSrc?: string;
+  link?: string;
 }
 
 const cardsData = [
@@ -22,6 +24,7 @@ const cardsData = [
     description: "Create intuitive, accessible buttons that drive action.",
     imgsrc: "/components-module/component-module-1.svg",
     imgDarkSrc: "/components-module/component-module-1-dark.svg",
+    link: "/components-module/button",
   },
   {
     id: 2,
@@ -43,6 +46,7 @@ const cardsData = [
     description: "Create intuitive, accessible buttons that drive action.",
     imgsrc: "/components-module/component-module-4.svg",
     imgDarkSrc: "/components-module/component-module-4-dark.svg",
+    link: "/components-module/radio",
   },
   {
     id: 5,
@@ -57,6 +61,7 @@ const cardsData = [
     description: "Create intuitive, accessible buttons that drive action.",
     imgsrc: "/components-module/component-module-6.svg",
     imgDarkSrc: "/components-module/component-module-6-dark.svg",
+    link: "/components-module/menu-mobile",
   },
 ];
 
@@ -78,25 +83,27 @@ const CardGrid = () => {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 md:gap-6">
-      {cardsData.map(({ id, imgDarkSrc, imgsrc, title, description }) => (
-        <Card key={id} className="bg-card">
-          <div className="relative w-full h-[125px] border-b">
-            <Image
-              src={resolvedTheme === "dark" ? imgDarkSrc : imgsrc}
-              alt={`Image for ${title}`}
-              fill
-              className="object-contain bg-"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              priority
-            />
-          </div>
-          <CardHeader className="px-6 pb-2 pt-3">
-            <CardTitle className="text-foreground text-xl">{title}</CardTitle>
-          </CardHeader>
-          <CardContent className="px-6 pb-9">
-            <p className="text-muted-foreground text-base">{description}</p>
-          </CardContent>
-        </Card>
+      {cardsData.map(({ id, imgDarkSrc, imgsrc, title, description, link }) => (
+        <Link key={id} href={link || "#"}>
+          <Card className="bg-card hover:scale-105 transition delay-150 duration-300 ease-in-out">
+            <div className="relative w-full h-[125px] border-b">
+              <Image
+                src={resolvedTheme === "dark" ? imgDarkSrc : imgsrc}
+                alt={`Image for ${title}`}
+                fill
+                className="object-contain bg-"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority
+              />
+            </div>
+            <CardHeader className="px-6 pb-2 pt-3">
+              <CardTitle className="text-foreground text-xl">{title}</CardTitle>
+            </CardHeader>
+            <CardContent className="px-6 pb-9">
+              <p className="text-muted-foreground text-base">{description}</p>
+            </CardContent>
+          </Card>
+        </Link>
       ))}
     </div>
   );

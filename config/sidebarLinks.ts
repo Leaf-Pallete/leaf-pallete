@@ -60,12 +60,18 @@ export const sidebarLinks: SidebarSection[] = [
       },
       {
         id: 10,
+        href: "/components-module/menu-mobile",
+        title: "Menu Mobile Component",
+        text: "Menu mobile",
+      },
+      {
+        id: 11,
         href: "#",
         title: "Popover Component",
         text: "Popover",
       },
       {
-        id: 11,
+        id: 12,
         href: "/components-module/radio",
         title: "Radio Component",
         text: "Radio",
