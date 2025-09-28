@@ -61,7 +61,7 @@ const cardsData = [
     description: "Create intuitive, accessible buttons that drive action.",
     imgsrc: "/components-module/component-module-6.svg",
     imgDarkSrc: "/components-module/component-module-6-dark.svg",
-    link: "/components/component-menu-mobile",
+    link: "/components-module/menu-mobile",
   },
 ];
 
